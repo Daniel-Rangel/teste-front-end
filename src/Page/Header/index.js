@@ -10,7 +10,8 @@ import imgLogo from '../../image/logo.png'
 
 
 import { HeaderStyle, SectionTop, SectionSearch, NavSection } from "./styles"
-import { ContainerLg } from '../Container/style'
+import { ContainerLg } from '../../Components/Container/styles'
+
 
 
 export default function Header(){
@@ -29,7 +30,7 @@ export default function Header(){
                                 <input type="text" placeholder="O que você está buscando?"/>
                                 <button type="submit"><img src={imgLupa} alt="Lupa" /></button>
                             </form>
-                            <figure>
+                            <figure>{/* procurar uma tag mais semantica */}
                                 <a href=""><img src={imgDevolucao} alt="Devolução" /></a>
                                 <a href=""><img src={imgCoracao} alt="Favoritos" /></a>
                                 <a href=""><img src={imgPerfil} alt="Usuario" /></a>

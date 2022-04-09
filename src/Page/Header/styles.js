@@ -1,9 +1,22 @@
 import styled from 'styled-components'
 
 export const HeaderStyle = styled.header`
-    
+    position:relative;
+
     img{
         width: 16px;
+    }
+
+    ::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 11px;
+        border-radius: 0 0 10px 10px;
+        background: #fff;
+        position: absolute;
+        bottom: -11px;
+        z-index: 100;
     }
 `
 
@@ -35,11 +48,12 @@ export const SectionSearch = styled.section`
     border-top: 1px solid #F0F0F0;
     border-bottom: 1px solid #F0F0F0;
     padding: 12px 0;
+    
 
     div{
         width: 100%;
         display: flex;
-
+        
         
         img{
             width: 100%;
@@ -53,6 +67,8 @@ export const SectionSearch = styled.section`
             justify-content: space-between;
             background: #FEF6E7;
             padding-right: 1rem;
+            border-radius: 10px;
+            
 
             input{
                 width: 100%;
@@ -89,6 +105,8 @@ export const SectionSearch = styled.section`
             a:first-child{
                 align-self: flex-start;
             }
+
+            
         }
     }
 `
@@ -102,7 +120,7 @@ export const NavSection = styled.nav`
         text-transform: uppercase;
         color: #9F9F9F;
         font-weight: 600;
-        padding: 11px 0;
+        padding: 11px 0 0 0;
 
         a{
             color: #9F9F9F;
