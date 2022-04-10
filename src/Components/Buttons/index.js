@@ -1,4 +1,4 @@
-import { ButtonLink , ButtonS, ButtonSpan, ButtonSpanLeft, ButtonSpanRight } from "./styled";
+import { ButtonLink , ButtonS, ButtonS2, ButtonSpan, ButtonSpanLeft, ButtonSpanRight } from "./styled";
 
 function BtnLink(props){
     return(
@@ -13,6 +13,14 @@ function Btn(props){
         <ButtonS ativo={ props.ativo}>
            {props.name}
         </ButtonS>
+    )
+}
+
+function Btn2(props){
+    return(
+        <ButtonS2 ativo={ props.ativo}>
+           {props.name}
+        </ButtonS2>
     )
 }
 
@@ -41,4 +49,4 @@ function BtnSpanRight(props){
 }
 
 
-export {BtnLink, BtnSpan, BtnSpanLeft , BtnSpanRight, Btn}
+export {BtnLink, BtnSpan, BtnSpanLeft , BtnSpanRight, Btn , Btn2}

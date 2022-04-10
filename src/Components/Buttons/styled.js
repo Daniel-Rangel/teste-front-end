@@ -26,6 +26,15 @@ export const ButtonS = styled.button`
     text-transform: uppercase;
 `
 
+export const ButtonS2 = styled(ButtonS)`
+    width: 100%;
+    transition: 0.3s all ease-in-out;
+    
+    :hover{
+        opacity: 0.7;
+    }
+`
+
 export const ButtonSpan = styled.span`
         width: 32px;
         height: 32px;

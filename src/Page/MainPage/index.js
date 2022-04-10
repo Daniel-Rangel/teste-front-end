@@ -102,9 +102,31 @@ export default function Main(){
                         </div>
                     </div>
                     <section className='myDog_cards'>
-                                <CardEcommerce/>
-                                <CardEcommerce/>
-                                <CardEcommerce/>
+                        <BtnSpanLeft 
+                            image={imgSetaEsqueda} 
+                            name='seta para esqueda'
+                            posicao='0'
+                        />
+                        <BtnSpanRight 
+                            image={imgSetaDireita} 
+                            name='seta para Direita'
+                            posicao='0'
+                        />
+
+                        <CardEcommerce/>
+                        <CardEcommerce/>
+                        <CardEcommerce/>
+                        <CardEcommerce/>
+                    </section>
+                    <section className='myDog_footer'>
+                        <a href="#">Ver todos</a>
+                        <div className='span'>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </section>
                 </ContainerLg>
             </MyDogSection>
