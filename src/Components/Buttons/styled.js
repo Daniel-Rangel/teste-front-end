@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonLink = styled.a`
-    background: #FBB900;
+    background: var(--color-highlighted-text);
     color: #fff;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -12,6 +12,17 @@ export const ButtonLink = styled.a`
     border-radius: 10px;
     width: 12%;
     border: 1px solid #F0D075;
+    text-transform: uppercase;
+`
+
+export const ButtonS = styled.button`
+    background: ${ props => props.ativo ? "var(--color-highlighted-text)" : "var(--color-text-2)" };
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: ${ props => props.ativo ? "var(--color-text-2)" :"var(--color-text)" };
+    border: 1px solid ${ props => props.ativo ? "F0D075" :"var(--color-text)" };
+    border-radius: 10px;
     text-transform: uppercase;
 `
 
@@ -32,4 +43,16 @@ export const ButtonSpan = styled.span`
         img{
             width: 10px;
         }
+`
+
+export const ButtonSpanLeft = styled(ButtonSpan)`
+            left: 0;
+            bottom: 50%;
+            transform: translate(-50% , 0);
+`
+
+export const ButtonSpanRight = styled(ButtonSpan)`
+            left: 101%;
+            bottom: 50%;
+            transform: translate( 0, 0);
 `
