@@ -48,7 +48,15 @@ export const FooterStyle = styled.footer`
             display: grid;
             gap: 8px;
             grid-template-columns: 1fr 1fr 1fr;
-            
+            figure{
+                width: 68px;
+                height: 38px;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+            }
         }
     }
 
@@ -76,6 +84,10 @@ export const FooterStyle = styled.footer`
         padding-top: 2rem;
         padding-left: 2rem;
         padding-bottom: 2rem;
+
+        img{
+            padding: 10px;
+        }
     }
 
     section{

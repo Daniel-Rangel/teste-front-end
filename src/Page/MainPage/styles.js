@@ -8,6 +8,7 @@ export const MainBody = styled.main`
 
 `
 export const MainCategori = styled.section`
+    width: 100%;
     display: flex;
     gap: 1rem;
     text-align: center;
@@ -25,15 +26,16 @@ export const MainCategori = styled.section`
 export const MyDogSection = styled.section`
     margin-top: 2.75rem;
 
-
     .myDog_header{
         display: flex;
         justify-content: space-between;
         align-items: center;
         
+
         .myDog_buttons{
             display: flex;
             gap: 1rem;
+            position: relative;
         }
     }
 
@@ -79,8 +81,18 @@ export const MyDogSection = styled.section`
 export const TopBrands = styled.section`
     margin-top: 4rem;
 
-
     .top_brands_header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a{
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--color-highlighted-text);
+    }
+
+    .top_brands_body{
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -131,6 +143,7 @@ export const OurBlogs = styled.section`
 
 export const InstagramSection = styled.section`
     margin: 44px 0;
+    
     .instagram-header{
         display: flex;
         justify-content: space-between;

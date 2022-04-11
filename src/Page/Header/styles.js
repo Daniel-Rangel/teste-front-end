@@ -4,7 +4,7 @@ export const HeaderStyle = styled.header`
     position:relative;
 
     img{
-        width: 16px;
+        width: 18px;
     }
 
     ::after{
@@ -98,8 +98,8 @@ export const SectionSearch = styled.section`
             gap: 30px;
 
             img{
-                width: 26px;
-                height: 26px;
+                width: auto;
+                height: auto;
             }
 
             a:first-child{
@@ -120,13 +120,22 @@ export const NavSection = styled.nav`
         text-transform: uppercase;
         color: #9F9F9F;
         font-weight: 600;
-        padding: 11px 0 0 0;
+        padding: 12px 0 0 0;
 
         a{
             color: #9F9F9F;
             text-decoration: none; 
-            font-size: 0.75rem;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: center;
+            
+            img{
+                width: auto;
+                padding-right: 6px;
+            }
         }
+
+        
 
         a:hover{
             color: #FBB900;

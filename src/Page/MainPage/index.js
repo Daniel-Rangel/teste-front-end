@@ -16,6 +16,8 @@ import iconUser from '../../image/icons/User.png'
 import imgPetiscos from '../../image/image-41.png'
 import imgSetaEsqueda from '../../image/icons/seta-esquerda-cinza.png'
 import imgSetaDireita from '../../image/icons/seta-direita-cinza.png'
+import imgSetaEsqueda1 from '../../image/icons/seta-esquerda-amarela.png'
+import imgSetaDireita1 from '../../image/icons/seta-direita-amarela.png'
 
 import { ContainerLg } from "../../Components/Container/styles";
 import { InstagramSection, MainBody, MainCategori, MessageForm, MyDogSection, OurBlogs, TopBrands } from "./styles";
@@ -209,6 +211,16 @@ export default function Main(){
                     <div className="myDog_header">
                         <h1>Meu cachorro...</h1>
                         <div className="myDog_buttons">
+                            <BtnSpanLeft 
+                                image={imgSetaEsqueda1} 
+                                name='seta para esqueda'
+                                adjustment='btnSpanLeft-adjustment-1'
+                            />
+                            <BtnSpanRight 
+                                image={imgSetaDireita1} 
+                                name='seta para Direita'
+                                adjustment='btnSpanRight-adjustment-1'
+                            />
                             {personalityPet.map( pet => (
                                 <Btn name={pet.name} ativo={pet.ativo}/>
                             ))}
@@ -244,8 +256,11 @@ export default function Main(){
 
             <TopBrands>
                 <ContainerLg>
-                    <h1>Principais marcas</h1>
-                    <section className="top_brands_header">
+                    <div className='top_brands_header'>
+                        <h1>Principais marcas</h1>
+                        <a href="">Ver todos</a>
+                    </div>
+                    <section className="top_brands_body">
                         <BtnSpanLeft 
                             image={imgSetaEsqueda} 
                             name='seta para esqueda'
@@ -299,7 +314,7 @@ export default function Main(){
                 <ContainerLg>
                     <div className="instagram-header">
                         <h1>Instagram</h1>
-                        <a href="">+Seguir</a>
+                        <a href="">+ Seguir</a>
                     </div>
                 </ContainerLg>
                 <section className='instagram_body'>

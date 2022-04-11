@@ -7,6 +7,6 @@ export const ContainerSm = styled.div`
 
 export const ContainerLg = styled.div`
     width: 100%;
-    max-width: 1128px;
+    max-width: 1250px;
     margin: 0 auto;
 `

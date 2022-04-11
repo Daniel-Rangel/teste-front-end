@@ -6,6 +6,7 @@ import imgDevolucao from '../../image/icons/caixa-de-devolucao.png'
 import imgCarrinho from '../../image/icons/carrinho.png'
 import imgCoracao from '../../image/icons/coracao.png'
 import imgPerfil from '../../image/icons/perfil.png'
+import imgCrownSimple from '../../image/icons/CrownSimple.png'
 import imgLogo from '../../image/logo.png'
 
 
@@ -49,7 +50,7 @@ export default function Header(){
                             <li><a href='#'>Casa e Conforto</a></li>
                             <li><a href='#'>Educação</a></li>
                             <li><a href='#'>Ofertas</a></li>
-                            <li><a href='#'>Coleção de outono</a></li>
+                            <li><a href='#'><img src={imgCrownSimple} alt="CrownSimple"/> Coleção de outono</a></li>
                         </ul>
                     </ContainerLg>
                 </NavSection>
