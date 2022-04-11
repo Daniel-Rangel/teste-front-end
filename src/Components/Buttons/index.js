@@ -2,15 +2,16 @@ import { ButtonLink , ButtonS, ButtonS2, ButtonSpan, ButtonSpanLeft, ButtonSpanR
 
 function BtnLink(props){
     return(
-        <ButtonLink>
+        <ButtonLink className={props.adjustments}>
             {props.props}
+            {console.log(props.props)}
         </ButtonLink>
     )
 }
 
 function Btn(props){
     return(
-        <ButtonS ativo={ props.ativo}>
+        <ButtonS ativo={ props.ativo} className={props.adjustment} >
            {props.name}
         </ButtonS>
     )
@@ -34,7 +35,7 @@ function BtnSpan(props){
 
 function BtnSpanLeft(props){
     return(
-        <ButtonSpanLeft >
+        <ButtonSpanLeft className={props.adjustment} >
            <img src={props.image} alt={props.name} /> 
         </ButtonSpanLeft>
     )
@@ -42,7 +43,7 @@ function BtnSpanLeft(props){
 
 function BtnSpanRight(props){
     return(
-        <ButtonSpanRight >
+        <ButtonSpanRight className={props.adjustment}>
            <img src={props.image} alt={props.name} /> 
         </ButtonSpanRight>
     )

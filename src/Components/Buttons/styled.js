@@ -10,9 +10,13 @@ export const ButtonLink = styled.a`
     display: flex;
     justify-content: center;
     border-radius: 10px;
-    width: 12%;
+    width: 15%;
     border: 1px solid #F0D075;
     text-transform: uppercase;
+
+    &.adjustmentsBtnLink{
+        width: 73%;
+    }
 `
 
 export const ButtonS = styled.button`
@@ -24,6 +28,11 @@ export const ButtonS = styled.button`
     border: 1px solid ${ props => props.ativo ? "F0D075" :"var(--color-text)" };
     border-radius: 10px;
     text-transform: uppercase;
+
+    &.adjustmentForm{
+        padding: 0.625rem 3rem;
+    }
+
 `
 
 export const ButtonS2 = styled(ButtonS)`
@@ -58,10 +67,30 @@ export const ButtonSpanLeft = styled(ButtonSpan)`
             left: 0;
             bottom: 50%;
             transform: translate(-50% , 0);
+
+            &.btnSpanLeft-adjustment{
+                bottom: 41%;
+            }
+
+            &.btnSpanLeft-adjustment-2{
+                bottom: 58%;
+            }
 `
 
 export const ButtonSpanRight = styled(ButtonSpan)`
             left: 101%;
             bottom: 50%;
             transform: translate( 0, 0);
+
+            &.btnSpanRight-adjustment{
+                left: 99%;
+                bottom: 41%;
+            }
+
+            &.btnSpanRight-adjustment-2{
+                left: 98.5%;
+                bottom: 58%;
+            }
+
+            
 `
