@@ -1,8 +1,8 @@
 import GlobalStyle from './styled/global'
 
-import Header from './Page/Header';
-import MainPage from './Page/MainPage';
-import Footer from './Page/Footer';
+import Header from './Layout/Header';
+import MainPage from './Layout/MainPage';
+import Footer from './Layout/Footer';
 
 function App() {
   return (

@@ -19,6 +19,7 @@ import imgSetaDireita from '../../image/icons/seta-direita-cinza.png'
 import imgSetaEsqueda1 from '../../image/icons/seta-esquerda-amarela.png'
 import imgSetaDireita1 from '../../image/icons/seta-direita-amarela.png'
 
+
 import { ContainerLg } from "../../Components/Container/styles";
 import { InstagramSection, MainBody, MainCategori, MessageForm, MyDogSection, OurBlogs, TopBrands } from "./styles";
 
@@ -27,6 +28,12 @@ import { BtnSpanLeft, BtnSpanRight , Btn } from '../../Components/Buttons';
 import CategoryCards from "../../Components/Categories";
 import CardEcommerce from '../../Components/CardEcommerce'
 import Blog from '../../Components/Blog'
+
+import { useState, useEffect, useRef } from 'react'
+import axios from 'axios'
+import Brand from '../../Components/Brand'
+
+
 
 const categories =[
     {
@@ -175,10 +182,31 @@ const instagramSection = [
         img: imgInstagram3,
         link: '#',
         alt: 'figura'
-    }
+    },
 ]
 
 export default function Main(){
+
+    const [products , setProducts] = useState([])
+    const carousel = useRef(null)
+
+    useEffect(()=>{
+        axios.get('/teste-front-end/junior/caoselheiro/lista-produtos/produtos.json')
+            .then(response =>{
+                setProducts(response.data.products)
+            })
+    },[])
+
+    const handleLeftClick = () =>{
+        console.log('click left')
+        /* carousel.current.offsetWidth -= carousel.current.offsetWidth */
+    }
+
+    const handleRightClick = () => {
+        console.log('click right')
+        /* carousel.current.offsetWidth += carousel.current.offsetWidth */
+    }
+
     return(
         <MainBody>
             <Banner/>
@@ -189,12 +217,10 @@ export default function Main(){
                         <BtnSpanLeft 
                             image={imgSetaEsqueda} 
                             name='seta para esqueda'
-                            posicao='0'
                         />
                         <BtnSpanRight 
                             image={imgSetaDireita} 
                             name='seta para Direita'
-                            posicao='0'
                         />
 
                         {categories.map(e => (
@@ -226,21 +252,25 @@ export default function Main(){
                             ))}
                         </div>
                     </div>
+
                     <section className='myDog_cards'>
                         <BtnSpanLeft 
                             image={imgSetaEsqueda} 
                             name='seta para esqueda'
                         />
+
                         <BtnSpanRight 
                             image={imgSetaDireita} 
                             name='seta para Direita'
                         />
 
-                        <CardEcommerce/>
-                        <CardEcommerce/>
-                        <CardEcommerce/>
-                        <CardEcommerce/>
+                        <section className='myDog_carousel' ref={carousel} >
+                            {products.map( product => (
+                                <CardEcommerce product={product} key={product.price}/>
+                            ))}
+                        </section>
                     </section>
+
                     <section className='myDog_footer'>
                         <a href="#">Ver todos</a>
                         <div className='span'>
@@ -276,6 +306,11 @@ export default function Main(){
                                 <img src={brand.img} alt={brand.alt} />
                             </figure>
                         ))}
+                    </section>
+
+                    <section className='partnersBrand'>
+                        <Brand/>
+                        <Brand/>
                     </section>
                 </ContainerLg>
             </TopBrands>
@@ -323,6 +358,7 @@ export default function Main(){
                             <a href={instagram.link}><img src={instagram.img} alt={instagram.alt}/></a>
                         </figure>
                     ))}
+                    
                 </section>
             </InstagramSection>
 

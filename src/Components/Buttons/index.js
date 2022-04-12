@@ -4,7 +4,6 @@ function BtnLink(props){
     return(
         <ButtonLink className={props.adjustments}>
             {props.props}
-            {console.log(props.props)}
         </ButtonLink>
     )
 }
@@ -43,7 +42,7 @@ function BtnSpanLeft(props){
 
 function BtnSpanRight(props){
     return(
-        <ButtonSpanRight className={props.adjustment}>
+        <ButtonSpanRight className={props.adjustment} >
            <img src={props.image} alt={props.name} /> 
         </ButtonSpanRight>
     )

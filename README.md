@@ -2,12 +2,6 @@
 
 ## Desenvolvido para teste.
 
-<img src="https://img.shields.io/static/v1?label=Skill&message=HTML&color=da4b31"/>
-<img src="https://img.shields.io/static/v1?label=Skill&message=CSS&color=254bdd"/>
-<img src="https://img.shields.io/static/v1?label=Skill&message=javascript&color=efd81d"/>
-<img src="https://img.shields.io/static/v1?label=Skill&message=React Native&color=7159c1"/>
-
-<br>
 <br>
 
 <h4 align="center"> 
@@ -15,25 +9,21 @@
 </h4>
 
 <br>
-<br>
-<br>
 
 ## Como instalar
 
-<hr>
-<br>
 <br>
 
 ```
-1° Clone este repositório
+1. Clone este repositório
 
 $ git clone
 
-2° Instale as dependências
+2. Instale as dependências
 
 $ npm install
 
-3° Execute a aplicação em modo de desenvolvimento
+3. Execute a aplicação em modo de desenvolvimento
 
 O servidor inciará na porta:3333
 

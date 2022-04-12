@@ -13,6 +13,7 @@ export const ButtonLink = styled.a`
     width: 15%;
     border: 1px solid #F0D075;
     text-transform: uppercase;
+    cursor: pointer;
 
     &.adjustmentsBtnLink{
         width: 73%;
@@ -32,6 +33,7 @@ export const ButtonS = styled.button`
     border: 1px solid ${ props => props.ativo ? "F0D075" :"var(--color-text)" };
     border-radius: 10px;
     text-transform: uppercase;
+    cursor: pointer;
 
     &.adjustmentForm{
         padding: 0.625rem 3rem;
@@ -52,7 +54,7 @@ export const ButtonS2 = styled(ButtonS)`
     }
 `
 
-export const ButtonSpan = styled.span`
+export const ButtonSpan = styled.button`
     width: 32px;
     height: 32px;
     display: flex;
@@ -65,6 +67,8 @@ export const ButtonSpan = styled.span`
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0px 6px 16px rgba(179, 134, 0, 0.24);
+    cursor: pointer;
+    z-index: 10;
 
     img{
         width: auto;

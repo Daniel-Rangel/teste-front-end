@@ -40,10 +40,19 @@ export const MyDogSection = styled.section`
     }
 
     .myDog_cards{
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
         position: relative;
+
+        .myDog_carousel{
+            display: flex;
+            justify-content: space-between;
+            gap: 5.2rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
     }
 
     .myDog_footer{
@@ -80,6 +89,7 @@ export const MyDogSection = styled.section`
 
 export const TopBrands = styled.section`
     margin-top: 4rem;
+    margin-bottom: 4rem;
 
     .top_brands_header{
         display: flex;
@@ -107,6 +117,11 @@ export const TopBrands = styled.section`
             align-items: center;
             justify-content: center;
         }
+    }
+
+    .partnersBrand{
+        display: flex;
+        gap: 1.25rem;
     }
 `
 export const OurBlogs = styled.section`
@@ -144,6 +159,8 @@ export const OurBlogs = styled.section`
 export const InstagramSection = styled.section`
     margin: 44px 0;
     
+
+    
     .instagram-header{
         display: flex;
         justify-content: space-between;
@@ -157,7 +174,16 @@ export const InstagramSection = styled.section`
 
     .instagram_body{
         display: flex;
-        overflow: hidden;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+    
+        figure{
+            width: 254px;
+
+            img{
+                width: 100%;
+            }
+        }
     }
 
 `

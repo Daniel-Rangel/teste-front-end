@@ -9,6 +9,7 @@ export const CardEcommerceArticle = styled.article`
     align-items: center;
     text-align: center;
     position: relative;
+    flex: none;
 
     h1{
         width: 165px;
